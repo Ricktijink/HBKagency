@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-.container {
-  background-color: #5131AA;
-}
-
 .header {
   height: 114px;
   width: 100%;
@@ -37,7 +33,7 @@
   display: block;
   font-size: 1.16rem;
   font-family: "Hammersmith One", sans-serif;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 .header .header-wrapper .navigation ul li a:hover {
   color: #F14A59;
@@ -56,7 +52,7 @@
   background-color: #F14A59;
 }
 .header .header-wrapper .cta-button a {
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease;
   color: #FFFFFF;
   text-decoration: none;
   font-weight: bold;
@@ -126,7 +122,7 @@
   height: 10px;
   margin-right: 30px;
   background-color: #c0aef3;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease;
 }
 .hero-banner .slider-controls a:hover {
   background-color: #F14A59;
@@ -197,7 +193,7 @@
   color: #7BCFDB;
 }
 .portfolio-highlights .highlight-image {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .portfolio-highlights .highlight-image img {
   width: 100%;
@@ -340,6 +336,9 @@
   cursor: pointer;
   position: relative;
 }
+.awards .awards-container .earned-awards .award-image {
+  transition: background-color 0.5s ease;
+}
 .awards .awards-container .earned-awards .award-image img {
   width: 100%;
   height: auto;
@@ -357,7 +356,74 @@
   transition: background-color 0.5s ease;
 }
 .awards .awards-container .earned-awards .award:hover > .award-title {
+  background-color: #FFC600;
+}
+.awards .awards-container .earned-awards .award:hover > .award-image {
   background-color: #F14A59;
+}
+
+.custom-select {
+  position: relative;
+  width: 84px !important;
+  font-family: Arial;
+  display: inline-block;
+  font-size: 16px;
+  top: -10px;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #FFC600;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #FFC600;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .big-projects {
@@ -375,7 +441,7 @@
 .big-projects .big-project img {
   width: 100%;
   height: auto;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .big-projects .big-project img:hover {
   -webkit-transform: scale(1.15);
@@ -391,7 +457,6 @@
 .big-projects .big-project .big-project-description {
   position: absolute;
   bottom: 0;
-  height: 110px;
   width: 100%;
   padding: 30px 40px;
 }
@@ -422,7 +487,7 @@
 .featured-article {
   width: 74%;
   height: auto;
-  margin: 0px auto;
+  margin: -4px auto 0px auto;
   display: flex;
 }
 .featured-article .article-image {
@@ -555,7 +620,7 @@
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease;
 }
 .featured-article .article-container .daily-article .article-content button:hover {
   background-color: #f32335;
@@ -605,7 +670,7 @@
   font-family: "Hammersmith One", sans-serif;
   font-size: 1.1rem;
   text-decoration: none;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 .links-contact .links-block .links-list ul li a:hover {
   color: #7BCFDB;
@@ -658,7 +723,7 @@
   display: block;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease;
 }
 .links-contact .contact-block button:hover {
   background-color: #f32335;
@@ -724,11 +789,15 @@
 .footer .footer-container .footer-copyright-socialmedia .socialmedia .social-icon i {
   color: #FFC600;
   padding: 4px;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 .footer .footer-container .footer-copyright-socialmedia .socialmedia .social-icon i:hover {
   color: #F14A59;
   cursor: pointer;
+}
+
+.container {
+  background-color: #5131AA;
 }
 
 /*# sourceMappingURL=main.css.map */
